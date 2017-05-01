@@ -38,7 +38,7 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-conn.php
+php/conn.php
 
 # Directories potentially created on remote AFP share
 .AppleDB
