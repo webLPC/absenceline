@@ -4,12 +4,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Las Positas College (LPC)" />
-<meta name="keywords" content="Las Positas College, Las Positas, LPC" />
+<meta name="keywords" content="Classes Not Meeting Today, Las Positas College, Las Positas, LPC" />
 <?php
 define('root', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('blogcategory', ' ');
 ?>
-<title>Faculty &amp; Staff Directory</title>
+<title>Classes Not Meeting Today</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -60,94 +60,21 @@ define('blogcategory', ' ');
 
         <span id="content-area" class="sr-only sr-only-focusable"></span>
 
-        <h1>Faculty &amp; Staff Directory</h1>
+        <h1>Classes Not Meeting Today</h1>
 
         <div class="row">
 
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2>Search Page</h2>
 
-            <p>Please enter the first or last name (or portion thereof), title or discipline, or classification to search for faculty, staff or administrators here at Las Positas College.</p>
+            <p>Occasionally a class session must be canceled due to instructor absences. Now you can check online and save yourself a trip to campus if your class is not meeting today! <strong>Only cancellations reported in advance will be displayed.</strong> Last-minute cancellations might not be included.</p>
 
-            <h3>Search by First Name</h3>
+            <p>The following table displays <strong>only classes that are not meeting today</strong>. Please check back to see if if your class meets again this week.</p>
 
-            <form action="results.php" class="form-inline" method="post">
-              <div class="form-group">
-                <div class="col-md-8">
-                  <label for="firstName" class="sr-only">First Name</label>
-                  <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name" value="">
-                </div>
-                <div class="col-md-4">
-                  <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-              </div>
-            </form>
+            <p><strong><em>Disclaimer: Only absences reported in advance have been displayed. Last-minute cancellations might not be included.</em></strong></p>
 
-            <h3>Search by Last Name</h3>
+            <p><strong>Showing classes not meeting on:</strong></p>
 
-            <form action="results.php" class="form-inline" method="post">
-              <div class="form-group">
-                <div class="col-md-8">
-                  <label for="lastName" class="sr-only">Last Name</label>
-                  <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" value=""/>
-                </div>
-                <div class="col-md-4">
-                  <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-              </div>
-            </form>
-
-            <h3>Search by Title or Discipline</h3>
-
-            <form action="results.php" class="form-inline" method="post">
-              <div class="form-group">
-                <div class="col-md-5">
-                  <label for="title" class="sr-only">Title or Discipline</label>
-                  <input class="form-control" type="text" id="title" name="title" placeholder="Title or Discipline" value=""/>
-                </div>
-                <div class="col-md-7">
-                  <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-
-
-                <div class="col-md-12">
-                  <p class="form-text text-muted">(e.g. Psychology, Counseling, Visual Communication)</p>
-                </div>
-              </div>
-            </form>
-
-            <h3>Search by Classification</h3>
-
-
-
-            <form action="results.php" class="form-inline" method="post">
-              <div class="form-group">
-                <div class="col-md-5">
-                  <select class="form-control" name="classification" id="classification">
-                  <option selected="selected">Select Classification</option>
-                  <option value="Full time Faculty">Full time Faculty</option>
-                  <option value="Adjunct Faculty">Adjunct Faculty</option>
-                  <option value="Administrator">Administrator</option>
-                  <option value="Classified">Classified</option>
-                  <option value="Classified Hourly">Classified Hourly</option>
-                  <option value="Contract">Contract</option>
-                  </select>
-                </div>
-                <div class="col-md-7">
-                  <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-                <div class="col-md-12">
-                  <p class="form-text text-muted">(e.g. Administrator, Full time Faculty Classified)</p>
-                </div>
-              </div>
-            </form>
-
-
-
-            <ul class="ul-lpc">
-              <li><a href="fulldirectory.php">Complete list of all Faculty, Staff and Administrators</a></li>
-              <li><a href="http://www.care-news.org/directory/directory.htm">CARE Retiree Directory</a></li>
-            </ul>
+            <p><?php echo date("m/d/Y"); ?></p>
 
           </div>
         </div>
