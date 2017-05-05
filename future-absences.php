@@ -4,14 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Las Positas College (LPC)" />
-<meta name="keywords" content="Classes Not Meeting Today, Las Positas College, Las Positas, LPC" />
+<meta name="keywords" content="Upcoming Cancelled Classes, Las Positas College, Las Positas, LPC" />
 <?php
 include_once("php/conn.php");
 
 define('root', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('blogcategory', ' ');
 ?>
-<title>Classes Not Meeting Today</title>
+<title>Upcoming Cancelled Classes</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -76,7 +76,7 @@ define('blogcategory', ' ');
 
         // Run select date query
         $currentDate = mysqli_real_escape_string($conn, $currentDate);
-        $select_results = "SELECT * FROM absencelog WHERE AbsenceStartDate = '" . $currentDate . "'";
+        $select_results = "SELECT * FROM absencelog WHERE AbsenceStartDate > '" . $currentDate . "'";
 
         $result = mysqli_query($conn, $select_results);
 
@@ -86,21 +86,14 @@ define('blogcategory', ' ');
 
         <span id="content-area" class="sr-only sr-only-focusable"></span>
 
-        <h1>Classes Not Meeting Today</h1>
+        <h1>Upcoming Cancelled Classes</h1>
 
         <div class="row">
 
           <div class="col-sm-12 col-md-12 col-lg-12">
-
-            <p>Occasionally a class session must be canceled due to instructor absences. Now you can check online and save yourself a trip to campus if your class is not meeting today! <strong>Only cancellations reported in advance will be displayed.</strong> Last-minute cancellations might not be included.</p>
-
-            <p>The following table displays <strong>only classes that are not meeting today</strong>. Please check back to see if if your class meets again this week.</p>
+            <p>The following table displays upcoming cancelled classes.</p>
 
             <p><strong><em>Disclaimer: Only absences reported in advance have been displayed. Last-minute cancellations might not be included.</em></strong></p>
-
-            <p><strong>Showing classes not meeting on:</strong></p>
-
-            <p class="ab_date"><?php echo date("F d, Y"); ?></p>
 
             <table class="table table-striped" summary="List of Faculty, Staff and Adminstration">
               <thead>
